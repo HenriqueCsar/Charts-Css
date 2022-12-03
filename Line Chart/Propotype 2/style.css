@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100;1,200&display=swap');
+
+body{
+    background: linear-gradient(-90deg,#3d5bbf, #6931d7);
+}
+
+/* FRAME */
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.149);
+    background: #372d80;
+    font-family: "Calibri", serif;
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:margin 2.6s;
+}
+
+.title-frame{
+    margin-left:20px;
+    padding:0;
+}
+/* FIM FRAME */
+
+/* CARD */
+
+.card {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    height: 300px;
+    width: 360px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.135);
+    overflow: hidden;
+    color:black;
+}
+
+
+/* HEADER CARD */
+
+
+.title-report,.date-report,.value-alert-report{
+    position: absolute;
+    top:10px;
+    left:6px;
+    font-family: "Poppins";
+}
+
+
+.title-report{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.date-report{
+    top:40px;
+}
+
+.value-alert-report{
+    right: 10px;
+    left:auto;
+}
+
+.value-alert-report .value{
+    color:red;
+    font-weight: bolder;
+}
+
+
+.card .card-header, .card-footer{
+    background-color: #ff00f71c;
+
+}
+
+.card .card-header{
+    width: 100%;
+    height: 25%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+.card-body{
+    height: 65%;
+    width: 100%;
+    background-color: #ffffff90;
+}
+
+.card-footer{
+    height: 10%;
+    padding-left:10px;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+}
+
+/* FIM HEADER CARD */
+
+
+/* CARD BODY */
+polyline {
+    fill: none;
+    stroke-linecap: round;
+}
+ polyline {
+    stroke: #643a7a;
+    width: 100%;
+ }
+
+ svg{
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+
+
+
+/* CARD FIM BODY*/
+
+
+/* FIM CARD */
+
+.dtu{
+    position: absolute;
+    top:0;
+    width: 100%;
+    border:1px solid red;
+    height: 100%;
+}
+
+
+.points{
+    position: absolute;
+    border:1px solid rgb(17, 0, 255);
+    width: 100%;
+    height:100%;
+    top:40%;
+}
+
+
+.tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+    background-color: #372d80;
+    color:white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
+}
+.card .tooltip:after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+    color:black;
+}
+
+.dtu [class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+    top:0;
+}
+
+.dtu [class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+.dtu [class^="point-"], .tooltip:after {
+    background: #372d80;
+}
+
+.points .point-1 {
+    left: 6px;
+    top: 23px;
+}
+
+
+.points .point-2 {
+    position: absolute;
+    left: 47px; /*LEFT -3 DO VALOR DO POLY*/
+    top: 9px; /*TOP -3 DO VALOR DO POLY*/
+    visibility: visible;
+}
+
+.points .point-3 {
+    position: absolute;
+    left: 87px;
+    top: 20px;
+    visibility: visible;
+}
+/* X,Y
+90,23 */
+
+.card .dtu svg {
+    position: absolute;
+    top:0;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: 7s dash 0.5s linear forwards;
+
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+   }
+}

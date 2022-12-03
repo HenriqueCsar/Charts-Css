@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,100;1,200&display=swap');
+
+body{
+    background: linear-gradient(-90deg,#3d5bbf, #6931d7);
+}
+
+/* FRAME */
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.149);
+    background: #372d80;
+    font-family: "Calibri", serif;
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition:margin 2.6s;
+}
+
+.title-frame{
+    margin-left:20px;
+    padding:0;
+}
+/* FIM FRAME */
+
+/* CARD */
+
+.card {
+    padding:5px;
+    position: absolute;
+    top: 80px;
+    left: 5px;
+    height: 300px;
+    width: 380px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.135);
+    overflow: hidden;
+    color:black;
+}
+
+
+/* HEADER CARD */
+
+
+.title-report,.date-report,.value-alert-report{
+    position: absolute;
+    top:10px;
+    left:6px;
+    font-family: "Poppins";
+}
+
+
+.title-report{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Poppins";
+}
+
+.date-report{
+    top:40px;
+}
+
+.value-alert-report{
+    right: 10px;
+    left:auto;
+}
+
+.value-alert-report .value{
+    color:red;
+    font-weight: bolder;
+}
+
+
+.card .card-header, .card-footer{
+    background-color: #ff00f71c;
+
+}
+
+.card .card-header{
+    width: 100%;
+    height: 25%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* FIM HEADER CARD */
+
+
+/* CARD BODY */
+polyline {
+    fill: none;
+    stroke-linecap: round;
+}
+ polyline {
+    stroke: #643a7a;
+    width: 100%;
+ }
+
+ svg{
+    width: 100%;
+    position: absolute;
+    top:0;
+}
+
+.card-body{
+    position: absolute;
+    top:25%;
+    height: 65%;
+    width: 100%;
+    background-color: #ffffff90;
+}
+
+.Alert-Context{
+    margin-top: 20px;
+    display: flex;
+    width: 97%;
+    justify-content:flex-end;
+}
+
+.Alert-Context [class^="Alert-Context-"]{
+    margin-right:15px;
+    color:#372d80;
+    font-size: 12px;
+}
+
+.Alert-Context-Pin{
+    width: 6px;
+    height: 2px;
+    position:relative;
+    background-color: #372d80;
+    left:-7px;
+    top:50%;
+}
+
+.card-footer{
+    position: absolute;
+    top:90%;
+    height: 10%;
+    width: 100%;
+    padding-left:10px;
+    font-family: "Poppins";
+    display: flex;
+    justify-content: center;
+    color:black;
+}
+
+
+/* CARD FIM BODY*/
+
+
+/* FIM CARD */
+
+.dtu{
+    position: absolute;
+    top:0;
+    padding:0;
+    margin:0;
+    width: 98%;
+    height: 100%;
+    background-color: #372d801b;
+}
+
+
+.points{
+    position: absolute;
+    width: 100%;
+    height:80%;
+    top:30%;
+}
+
+
+.tooltip {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translate3d(-50%, 10px, 0);
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 11px;
+    padding: 8px 6px;
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease-out 0s, opacity 0.4s ease-out 0s;
+    background-color: #372d80;
+    color:white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.308);
+}
+.card .tooltip:after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    margin-left: -3px;
+    bottom: -3px;
+    transform: rotate(45deg);
+    color:black;
+}
+
+.dtu [class^="point-"] {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    z-index: 10;
+    top:0;
+}
+
+.dtu [class^="point-"]:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
+}
+.dtu [class^="point-"], .tooltip:after {
+    background: #372d80;
+}
+
+.points .point-1 {
+    left: 6px;
+    top: 23px;
+}
+
+
+.points .point-2 {
+    position: absolute;
+    left: 47px; /*LEFT -3 DO VALOR DO POLY*/
+    top: 9px; /*TOP -3 DO VALOR DO POLY*/
+    visibility: visible;
+}
+
+.points .point-3 {
+    position: absolute;
+    left: 87px;
+    top: 20px;
+    visibility: visible;
+}
+/* X,Y
+90,23 */
+
+.card .dtu svg {
+    position: absolute;
+    top:0;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: 7s dash 0.5s linear forwards;
+
+}
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+   }
+}
+
+
+
+
+
+/*LINE*/
+
+.points .line-dtu-1{
+    position:absolute;
+    top:0;
+    height: 2px;
+    width: 100%;
+    background-color: #372d8065;
+}
+
+.points .line-dtu-1::after{
+    content:"";
+    position:absolute;
+    top:23px;
+    height: 2px;
+    width: 100%;
+    background-color: #372d8065;
+}
+
+
+.points .line-dtu-1::before{
+    content:"";
+    position:absolute;
+    top:45px;
+    height: 2px;
+    width: 100%;
+    background-color: #372d8065;
+}
+
+
+
+/* EIXO X */
+.eixo-x{
+    position:absolute;
+    bottom:30px;
+}
+
+
+.eixo-x [class^="day-"]{
+    font-size:9px;
+}
+
+.eixo-x .day-1{
+    position: absolute;
+    left:6;
+}
+
+.eixo-x .day-1{
+    position: absolute;
+    left:-1px;
+}
+
+.eixo-x .day-2{
+    position: absolute;
+    left:40px;
+}
+
+.eixo-x .day-3{
+    position: absolute;
+    left:80px; /* DAY - 10 DO POLY*/
+}
+
+
+
+/* FIM EIXO X */

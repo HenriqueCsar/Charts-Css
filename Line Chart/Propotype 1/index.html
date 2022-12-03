@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="frame">
+        <div class="title-frame">
+<pre>
+Server: <strong>[Servidor]</strong>
+Database: <strong>[Database]</strong>
+Alerta: <strong>DTU</strong>
+</pre>
+        </div>
+
+        <div class="body-frame">
+            <div class="card">
+                <div class="card-header">
+                    <span class="title-report">ResourceInfo</span>
+                    <span class="date-report">03:10:00 am às 03:20:00 am</span>
+                    <span class="value-alert-report">Alert <span class="value">100%</span> CPU</span> <!--Alert!-->
+                </div>
+                <div class="card-body">
+                    <div class="Alert-Context">
+                        <span class="Alert-Context-1"><div class="Alert-Context-Pin"></div>DTU</span>
+
+                            </div>
+                    
+                    <!- -Inicio DTU --!>
+                    <div class="dtu">
+                        <div class="points">
+                            <div class="line-dtu-1"></div>
+                            <div class="line-dtu-2"></div>    
+                            <svg>
+                                <polyline points="9,26 50,12 90,23 130,11 171,38 211,48 251,19 320,20 350,3"></polyline>    
+                            </svg>
+                            <div class="point-1">
+                                <div class="tooltip">100%</div>
+                            </div>
+
+                            <div class="point-2">
+                                <div class="tooltip">96%</div>
+                            </div>
+                            
+                            <div class="point-3">
+                                <div class="tooltip">96%</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!--Fim DTU-->
+
+                    <div class="eixo-x">
+                        <span class="day-1">01:10</span>
+                        <span class="day-2">01:20</span>
+                        <span class="day-3">01:30</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-footer">
+                Monitoramento Databasers
+            </div>
+        </div>
+
+        <div class="footer-frame">
+
+        </div>
+
+    </div>
+</body>
+</html>
