@@ -245,6 +245,14 @@ polyline {
     top: 20px;
     visibility: visible;
 }
+
+.points .point-4{
+    position: absolute;
+    left: 127px;
+    top: 8px;
+    visibility: visible;
+}/*130,11*/
+
 /* X,Y
 90,23 */
 
@@ -262,6 +270,9 @@ polyline {
    }
 }
 
+.points{
+    border:1px solid red;
+}
 
 
 
